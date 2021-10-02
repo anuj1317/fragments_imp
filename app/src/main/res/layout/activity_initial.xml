@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Fragments"
+        android:textColor="@color/white"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="80dp"
+        />
+
+    <Button
+        android:id="@+id/fraglifeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment Lifecycle"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_style"
+        app:backgroundTint="#EF5350"
+        />
+
+    <Button
+        android:id="@+id/dFragmentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dialog Fragment"
+        android:background="@drawable/button_style"
+        app:backgroundTint="#EF5350"
+        android:layout_margin="20dp"
+        />
+
+    <Button
+        android:id="@+id/pFragmentbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preference Fragment"
+        android:background="@drawable/button_style"
+        app:backgroundTint="#EF5350"
+        android:layout_margin="20dp"
+        />
+
+    <Button
+        android:id="@+id/demoFragmentbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment"
+        android:background="@drawable/button_style"
+        app:backgroundTint="#EF5350"
+        android:layout_margin="20dp"
+        />
+
+
+</LinearLayout>
