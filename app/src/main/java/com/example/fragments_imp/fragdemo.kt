@@ -41,6 +41,7 @@ class fragdemo : AppCompatActivity() {
                 add(R.id.f1, firstfragment, "firstfragment")
 //                addToBackStack("addFragment")
                 commit()
+                Toast.makeText(this@fragdemo, "Fragment Added", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -54,6 +55,7 @@ class fragdemo : AppCompatActivity() {
                 if (removefrag != null) {
                     remove(firstfragment)
                     commit()
+                    Toast.makeText(this@fragdemo, "Fragment removed", Toast.LENGTH_SHORT).show()
                 }
                 else {
                     Toast.makeText(this@fragdemo, "Add Fragment 1 first", Toast.LENGTH_LONG).show()
@@ -73,6 +75,7 @@ class fragdemo : AppCompatActivity() {
                 if (replacefrag != null) {
                  replace(R.id.f1,secondfragment,"secondfragment")
                     commit()
+                    Toast.makeText(this@fragdemo, "Fragment replaced by Second Fragment", Toast.LENGTH_SHORT).show()
                 }
                 else {
                     Toast.makeText(this@fragdemo, "Add Fragment 1 first for replacing", Toast.LENGTH_LONG).show()
@@ -89,6 +92,7 @@ class fragdemo : AppCompatActivity() {
                 if (Hidefrag != null) {
                     hide(firstfragment)
                     commit()
+                    Toast.makeText(this@fragdemo, "Fragment hidden", Toast.LENGTH_SHORT).show()
                 }
                 else {
                     Toast.makeText(this@fragdemo, "Add Fragment 1 first", Toast.LENGTH_LONG).show()
@@ -105,6 +109,7 @@ class fragdemo : AppCompatActivity() {
                 if (Showfrag!!.isHidden) {
                     show(firstfragment)
                     commit()
+                    Toast.makeText(this@fragdemo, "Fragment Shown", Toast.LENGTH_SHORT).show()
                 }
                 else {
                     Toast.makeText(this@fragdemo, "first click on hide", Toast.LENGTH_LONG).show()

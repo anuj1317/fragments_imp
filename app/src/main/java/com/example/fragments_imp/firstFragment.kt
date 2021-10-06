@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 
 
 class firstFragment : Fragment() {
@@ -27,29 +28,23 @@ class firstFragment : Fragment() {
       //Added listener to first button
         firstAdd = view.findViewById(R.id.btnfragment1)
         firstAdd.setOnClickListener {
-            val fragmentManager = fragmentManager
 
-            // create a FragmentTransaction to begin the transaction and add the Fragment
-            val fragmentTransaction = fragmentManager!!.beginTransaction()
-
-            // add the Fragment to existing container
-            fragmentTransaction.add(R.id.frameLayout,Design1_Fragment(), "FIRST_FRAGMENT")
-            fragmentTransaction.addToBackStack("none")
-            fragmentTransaction.commit()
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                add(R.id.frameLayout,Design1_Fragment(),"FIRST_FRAGMENT")
+                addToBackStack("none")
+                commit()
+            }
     }
 
 //Added Listener to Second Button
     secondAdd  =view.findViewById(R.id.btnfragment2)
     secondAdd.setOnClickListener {
-            val fragmentManager = fragmentManager
 
-            // create a FragmentTransaction to begin the transaction and add the Fragment
-            val fragmentTransaction = fragmentManager!!.beginTransaction()
-
-            // add the Fragment to existing container
-            fragmentTransaction.add(R.id.frameLayout, Design2_Fragment(), "SECOND_FRAGMENT")
-        fragmentTransaction.addToBackStack("none")
-        fragmentTransaction.commit()
+        requireActivity().supportFragmentManager.beginTransaction().apply {
+            add(R.id.frameLayout,Design2_Fragment(),"SECOND_FRAGMENT")
+            addToBackStack("none")
+            commit()
+        }
 
     }
         return view
